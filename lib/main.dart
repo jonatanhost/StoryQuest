@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:storyquest/pages/profile.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'pages/library.dart';
 import 'pages/home.dart';
+import 'powersync.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await openDatabase();
   runApp(MyApp());
 }
 
